@@ -37,6 +37,6 @@ ObjectModel {
         return true
     }
 
-    Component.onCompleted: reset()
+//    Component.onCompleted: reset()
 
 }
