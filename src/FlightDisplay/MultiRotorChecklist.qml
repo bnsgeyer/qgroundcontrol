@@ -207,6 +207,7 @@ Item {
 
             PreFlightRCCheck {
             }
+        }
 
         PreFlightCheckGroup {
             name: qsTr("Mission Checks")
