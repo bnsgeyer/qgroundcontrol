@@ -179,7 +179,6 @@ Item {
             }
 
             PreFlightBatteryCheck {
-//                failurePercent:                 60
                 allowFailurePercentOverride:    false
             }
 
@@ -206,12 +205,8 @@ Item {
                 }
             }
 
-  //          PreFlightRCCheck {
- //           }
-
-//            PreFlightSoundCheck {
-//            }
-        }
+            PreFlightRCCheck {
+            }
 
         PreFlightCheckGroup {
             name: qsTr("Mission Checks")
