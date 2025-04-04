@@ -68,7 +68,7 @@ ColumnLayout {
         }
         
         if (allPassed) {
-            resetCheckListItem()
+            RowLayout.resetCheckListItem()
         }
         allChecksPassed = allPassed;
     }
