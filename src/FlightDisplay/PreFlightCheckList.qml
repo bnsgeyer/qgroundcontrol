@@ -66,6 +66,10 @@ ColumnLayout {
                 break
             }
         }
+        
+        if (allPassed) {
+            resetCheckListItem()
+        }
         allChecksPassed = allPassed;
     }
 
@@ -139,6 +143,17 @@ ColumnLayout {
             height:             1.2 * ScreenTools.defaultFontPixelHeight
             Layout.alignment:   Qt.AlignVCenter
             onClicked: {
+                resetCheckListItem()
+                checkListRepeater.model.reset()
+            }
+
+            QGCColoredImage {
+                source:         "/qmlimages/MapSyncBlack.svg"
+                color:          qgcPal.buttonText
+                anchors.fill:   parent
+            }
+
+            function resetCheckListItem() {
                 globals.activeVehicle.checkListItem1 = false
                 globals.activeVehicle.checkListItem2 = false
                 globals.activeVehicle.checkListItem3 = false
@@ -160,13 +175,6 @@ ColumnLayout {
                 globals.activeVehicle.checkListItem19 = false
                 globals.activeVehicle.checkListItem20 = false
                 globals.activeVehicle.checkListItem21 = false
-                checkListRepeater.model.reset()
-            }
-
-            QGCColoredImage {
-                source:         "/qmlimages/MapSyncBlack.svg"
-                color:          qgcPal.buttonText
-                anchors.fill:   parent
             }
         }
     }
