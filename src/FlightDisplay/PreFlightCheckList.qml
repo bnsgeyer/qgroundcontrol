@@ -68,7 +68,27 @@ ColumnLayout {
         }
         
         if (allPassed) {
-            RowLayout.resetCheckListItem()
+            globals.activeVehicle.checkListItem1 = false
+            globals.activeVehicle.checkListItem2 = false
+            globals.activeVehicle.checkListItem3 = false
+            globals.activeVehicle.checkListItem4 = false
+            globals.activeVehicle.checkListItem5 = false
+            globals.activeVehicle.checkListItem6 = false
+            globals.activeVehicle.checkListItem7 = false
+            globals.activeVehicle.checkListItem8 = false
+            globals.activeVehicle.checkListItem9 = false
+            globals.activeVehicle.checkListItem10 = false
+            globals.activeVehicle.checkListItem11 = false
+            globals.activeVehicle.checkListItem12 = false
+            globals.activeVehicle.checkListItem13 = false
+            globals.activeVehicle.checkListItem14 = false
+            globals.activeVehicle.checkListItem15 = false
+            globals.activeVehicle.checkListItem16 = false
+            globals.activeVehicle.checkListItem17 = false
+            globals.activeVehicle.checkListItem18 = false
+            globals.activeVehicle.checkListItem19 = false
+            globals.activeVehicle.checkListItem20 = false
+            globals.activeVehicle.checkListItem21 = false
         }
         allChecksPassed = allPassed;
     }
