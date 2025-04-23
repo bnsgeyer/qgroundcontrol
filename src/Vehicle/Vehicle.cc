@@ -3007,20 +3007,18 @@ void Vehicle::motorInterlockEnable()
 {
     sendMavCommand(
                 defaultComponentId(),
-                MAV_CMD_AIRFRAME_CONFIGURATION,
-                true,       // show error if fails
-                -1.0f,      // all gears
-                0.0f);      // down
+                MAV_CMD_DO_AUX_FUNCTION,
+                32,       // motor interlock
+                2);      // Enabled
 }
 
 void Vehicle::motorInterlockDisable()
 {
     sendMavCommand(
                 defaultComponentId(),
-                MAV_CMD_AIRFRAME_CONFIGURATION,
-                true,       // show error if fails
-                -1.0f,      // all gears
-                1.0f);      // up
+                MAV_CMD_DO_AUX_FUNCTION,
+                32,       // motor interlock
+                0);      // Disabled
 }
 
 void Vehicle::setCurrentMissionSequence(int seq)
