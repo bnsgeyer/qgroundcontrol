@@ -3003,6 +3003,26 @@ void Vehicle::landingGearRetract()
                 1.0f);      // up
 }
 
+void Vehicle::motorInterlockEnable()
+{
+    sendMavCommand(
+                defaultComponentId(),
+                MAV_CMD_AIRFRAME_CONFIGURATION,
+                true,       // show error if fails
+                -1.0f,      // all gears
+                0.0f);      // down
+}
+
+void Vehicle::motorInterlockDisable()
+{
+    sendMavCommand(
+                defaultComponentId(),
+                MAV_CMD_AIRFRAME_CONFIGURATION,
+                true,       // show error if fails
+                -1.0f,      // all gears
+                1.0f);      // up
+}
+
 void Vehicle::setCurrentMissionSequence(int seq)
 {
     SharedLinkInterfacePtr sharedLink = vehicleLinkManager()->primaryLink().lock();
